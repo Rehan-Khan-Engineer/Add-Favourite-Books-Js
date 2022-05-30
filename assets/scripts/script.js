@@ -61,6 +61,11 @@ const searchBookHandler = () => {
   renderBooks(filterTerm);
 };
 
+const ul = document.querySelector("ul");
+ul.addEventListener("click", (event) => {
+  event.target.closest("li").classList.toggle("highlight");
+});
+
 addBookBtn.addEventListener("click", addBookHandler);
 
 searchBtn.addEventListener("click", searchBookHandler);
